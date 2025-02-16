@@ -1,5 +1,7 @@
 # Textfx
 
+[![PyPI Downloads](https://static.pepy.tech/badge/textfx)](https://pepy.tech/project/textfx)
+
 Textify is a Python library for creating dynamic and visually engaging text effects. It offers multiple functions to display text with unique animations and styles, perfect for enhancing console-based projects.
 
 ## Features
