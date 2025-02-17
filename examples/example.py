@@ -1,4 +1,4 @@
-from textify import typeeffect, falltext, scrameffect, wavetext
+from textfx import typeeffect, falltext, scrameffect, wavetext, unfalltext, unscrameffect, untypeeffect, unwavetext
 
 text = "Hello, Anya!"
 
@@ -13,3 +13,5 @@ scrameffect(text)
 
 # Wave text effect
 wavetext(text)
+
+# You can use 'un' defind like typeeffect
