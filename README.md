@@ -11,10 +11,10 @@ Textify is a Python library for creating dynamic and visually engaging text effe
 - **Falling Text**: Characters "fall" into place, similar to the rain effect from *The Matrix*.
 - **Scramble Effect**: Displays random characters that gradually transform into the actual text.
 - **Wave Text**: Makes the text move in a wave-like pattern.
-- **Untyping Effect** (New in v0.1.2): Gradually erases text character by character.
-- **Unfalling Text** (New in v0.1.2): The text vanishes in a scattered manner.
-- **Unscramble Effect** (New in v0.1.2): The text gradually scrambles into random characters until it disappears.
-- **Unwave Text** (New in v0.1.2): The text starts in a wave-like pattern and gradually stabilizes.
+- **Untyping Effect** (New in v0.2): Gradually erases text character by character.
+- **Unfalling Text** (New in v0.2): The text vanishes in a scattered manner.
+- **Unscramble Effect** (New in v0.2): The text gradually scrambles into random characters until it disappears.
+- **Unwave Text** (New in v0.2): The text starts in a wave-like pattern and gradually stabilizes.
 
 ## Installation
 You can install it With:
@@ -63,25 +63,25 @@ from textfx import wavetext
 wavetext("Wave Text", delay=0.2)
 ```
 
-### Untyping Effect (New in v0.1.2)
+### Untyping Effect (New in v0.2)
 ```python
 from textfx import untypeeffect
 untypeeffect("Erasing Text", delay=0.1)
 ```
 
-### Unfalling Text (New in v0.1.2)
+### Unfalling Text (New in v0.2)
 ```python
 from textfx import unfalltext
 unfalltext("Vanishing Text", delay=0.1)
 ```
 
-### Unscramble Effect (New in v0.1.2)
+### Unscramble Effect (New in v0.2)
 ```python
 from textfx import unscrameffect
 unscrameffect("Glitching Away", delay=0.1)
 ```
 
-### Unwave Text (New in v0.1.2)
+### Unwave Text (New in v0.2)
 ```python
 from textfx import unwavetext
 unwavetext("Steadying Waves", delay=0.1)
