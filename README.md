@@ -17,8 +17,13 @@ Textify is a Python library for creating dynamic and visually engaging text effe
 - **Unwave Text** (New in v0.1.2): The text starts in a wave-like pattern and gradually stabilizes.
 
 ## Installation
+You can install it With:
 
-Currently, Textfx is not available on PyPI. You can clone this repository and use the `textfx.py` file directly in your project:
+```bash
+pip install textfx
+```
+
+or You can clone this repository and use the `textfx.py` file directly in your project:
 
 ```bash
 git clone https://github.com/iliakarimi/textfx.git
