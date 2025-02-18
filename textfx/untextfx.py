@@ -64,3 +64,4 @@ def unwavetext(text, delay=0.1):
         wave = ''.join([char.upper() if idx == i else char.lower() for idx, char in enumerate(text)])
         print("\r" + wave, end='', flush=True)
         sleep(delay)
+
