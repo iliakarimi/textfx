@@ -48,7 +48,7 @@ typeeffect("Hello, world!", delay=0.1)
 ### Falling Text
 ```python
 from textfx import falltext
-falltext("Falling Text", delay=0.2)
+falltext("Falling Text", delay=0.1)
 ```
 
 ### Scramble Effect
@@ -60,28 +60,28 @@ scrameffect("Scrambled Text", delay=0.1)
 ### Wave Text
 ```python
 from textfx import wavetext
-wavetext("Wave Text", delay=0.2)
+wavetext("Wave Text", delay=0.1)
 ```
 
-### Untyping Effect (New in v0.2)
+### Untyping Effect
 ```python
 from textfx import untypeeffect
 untypeeffect("Erasing Text", delay=0.1)
 ```
 
-### Unfalling Text (New in v0.2)
+### Unfalling Text
 ```python
 from textfx import unfalltext
 unfalltext("Vanishing Text", delay=0.1)
 ```
 
-### Unscramble Effect (New in v0.2)
+### Unscramble Effect
 ```python
 from textfx import unscrameffect
 unscrameffect("Glitching Away", delay=0.1)
 ```
 
-### Unwave Text (New in v0.2)
+### Unwave Text
 ```python
 from textfx import unwavetext
 unwavetext("Steadying Waves", delay=0.1)
