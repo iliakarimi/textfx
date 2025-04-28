@@ -18,22 +18,6 @@ def untypeeffect(text, delay=0.1):
 
 
 
-def unfalltext(text, delay=0.1):
-    """
-    The characters "rise" one by one until the text disappears.
-    
-    Similar to an inverse fall effect, where letters vanish in a scattered manner.
-    """
-
-    output = list(text)
-    while any(char != ' ' for char in output):
-        index = random.choice([i for i, char in enumerate(output) if char != ' '])
-        output[index] = ' '
-        print("\r" + ''.join(output), end='', flush=True)
-        sleep(delay)
-
-
-
 def unscrameffect(text, delay=0.1):
     """
     The actual text gradually scrambles into random characters until it disappears.

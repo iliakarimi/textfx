@@ -3,18 +3,18 @@
 [![PyPI Downloads](https://static.pepy.tech/badge/textfx)](https://pepy.tech/project/textfx)
 
 
-Textify is a Python library for creating dynamic and visually engaging text effects. It offers multiple functions to display text with unique animations and styles, perfect for enhancing console-based projects.
+Textfx is a Python library for creating dynamic and visually engaging text effects. It offers multiple functions to display text with unique animations and styles, perfect for enhancing console-based projects.
 
 ## Features
 
 - **Typing Effect**: Simulates the effect of typing text character by character.
-- **Falling Text**: Characters "fall" into place, similar to the rain effect from *The Matrix*.
+- **Falling Text**: Coming Soon...
 - **Scramble Effect**: Displays random characters that gradually transform into the actual text.
 - **Wave Text**: Makes the text move in a wave-like pattern.
-- **Untyping Effect** (New in v0.2): Gradually erases text character by character.
-- **Unfalling Text** (New in v0.2): The text vanishes in a scattered manner.
-- **Unscramble Effect** (New in v0.2): The text gradually scrambles into random characters until it disappears.
-- **Unwave Text** (New in v0.2): The text starts in a wave-like pattern and gradually stabilizes.
+- **Untyping Effect**: Gradually erases text character by character.
+- **Unfalling Text**: Coming Soon...
+- **Unscramble Effect**: The text gradually scrambles into random characters until it disappears.
+- **Unwave Text**: The text starts in a wave-like pattern and gradually stabilizes.
 
 ## Installation
 You can install it With:
@@ -45,11 +45,6 @@ from textfx import typeeffect
 typeeffect("Hello, world!", delay=0.1)
 ```
 
-### Falling Text
-```python
-from textfx import falltext
-falltext("Falling Text", delay=0.1)
-```
 
 ### Scramble Effect
 ```python
@@ -69,11 +64,6 @@ from textfx import untypeeffect
 untypeeffect("Erasing Text", delay=0.1)
 ```
 
-### Unfalling Text
-```python
-from textfx import unfalltext
-unfalltext("Vanishing Text", delay=0.1)
-```
 
 ### Unscramble Effect
 ```python
@@ -89,7 +79,7 @@ unwavetext("Steadying Waves", delay=0.1)
 
 ## Dependencies
 
-- Python 3.x
+- Python 3.8
 
 ## Contributing
 
@@ -101,4 +91,4 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 ---
 
-Enjoy using Textify! Let your text come to life!
+Enjoy using Textfx! Let your text come to life!

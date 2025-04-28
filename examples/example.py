@@ -1,17 +1,15 @@
-from textfx import typeeffect, falltext, scrameffect, wavetext, unfalltext, unscrameffect, untypeeffect, unwavetext
+from textfx import typeeffect, scrameffect, wavetext, unscrameffect, untypeeffect, unwavetext
 
-text = "Hello, Anya!"
+test = "Hello, Anya!"
 
 # Type effect
-typeeffect(text)
+typeeffect(text= test, delay=0.08)
 
-# "Fall" text effect
-falltext(text)
 
 # Scramble effect
-scrameffect(text)
+scrameffect(text= test, delay=0.08)
 
 # Wave text effect
-wavetext(text)
+wavetext(text= test, delay=0.08)
 
 # You can use 'un' defind like typeeffect

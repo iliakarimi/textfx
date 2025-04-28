@@ -14,22 +14,6 @@ def typeeffect(text, color, delay=0.1):
         print(tp, end='', flush=True)
 
 
-def falltext(text, delay=0.1):
-    
-    """""
-    The characters "fall" from above one by one until the text is complete.
-    
-        Similar to the rain effect in the movie The Matrix.
-    """""
-
-    output = [' ' for _ in text]
-    while ' ' in output:
-        index = random.choice([i for i, char in enumerate(output) if char == ' '])
-        output[index] = text[index]
-        print("\r" + ''.join(output), end='', flush=True)
-        sleep(delay)
-
-
 def scrameffect(text, delay=0.1):
     
     """""
