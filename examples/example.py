@@ -12,4 +12,5 @@ scrameffect(text= test, delay=0.08)
 # Wave text effect
 wavetext(text= test, delay=0.08)
 
-# You can use 'un' defind like typeeffect
+
+# You can use 'un' defind like 
