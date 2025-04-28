@@ -17,7 +17,6 @@ def untypeeffect(text, delay=0.1):
         sleep(delay)
 
 
-
 def unscrameffect(text, delay=0.1):
     """
     The actual text gradually scrambles into random characters until it disappears.

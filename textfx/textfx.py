@@ -2,7 +2,7 @@ from time import sleep
 import random
 import string
 
-def typeeffect(text, color, delay=0.1):
+def typeeffect(text, delay=0.1):
     """""
     This type of effect prints text character by character with a specific delay.
 
@@ -12,6 +12,7 @@ def typeeffect(text, color, delay=0.1):
     for tp in text:
         sleep(delay)
         print(tp, end='', flush=True)
+
 
 
 def scrameffect(text, delay=0.1):
