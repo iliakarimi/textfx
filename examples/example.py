@@ -1,16 +1,30 @@
-from textfx import typeeffect, scrameffect, wavetext, unscrameffect, untypeeffect, unwavetext
+from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext
+import time
 
-test = "Hello, Anya!"
+def run_examples():
+    print("Typing Effect:")
+    typeeffect("Hello, world!", color="cyan", delay=0.1)
+    time.sleep(1)
 
-# Type effect
-typeeffect(text= test, delay=0.08)
+    print("\nScramble Effect:")
+    scrameffect("Scrambled Text", delay=0.1)
+    time.sleep(1)
 
+    print("\nWave Text:")
+    wavetext("Wave Text", delay=0.1)
+    time.sleep(1)
 
-# Scramble effect
-scrameffect(text= test, delay=0.08)
+    print("\nUntyping Effect:")
+    untypeeffect("Erasing Text", delay=0.1)
+    time.sleep(1)
 
-# Wave text effect
-wavetext(text= test, delay=0.08)
+    print("\nUnscramble Effect:")
+    unscrameffect("Glitching Away", delay=0.1)
+    time.sleep(1)
 
+    print("\nUnwave Text:")
+    unwavetext("Steadying Waves", delay=0.1)
+    time.sleep(1)
 
-# You can use 'un' defind like 
+if __name__ == "__main__":
+    run_examples()
