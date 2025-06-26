@@ -1,4 +1,5 @@
-from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext
+from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext, Loading
+from time import sleep
 import time
 
 def run_examples():
@@ -28,3 +29,7 @@ def run_examples():
 
 if __name__ == "__main__":
     run_examples()
+
+
+with Loading("در حال پردازش... "):
+    sleep(3)

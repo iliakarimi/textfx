@@ -30,3 +30,4 @@ class Loading():
     def __exit__(self, exc_type, exc_val, exc_tb):
         self._done = True
         self._thread.join()
+
