@@ -1,6 +1,6 @@
-from time import sleep
 import random
 import string
+from time import sleep
 from termcolor import colored
 
 
