@@ -5,10 +5,9 @@ name: Python package
 
 on:
   push:
-    branches: [ "ci-test" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  workflow_dispatch:
 jobs:
   build:
 
