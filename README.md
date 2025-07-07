@@ -104,7 +104,7 @@ Loading(animation=".oO@* ")
 Or change the text and delay:
 
 ```python
-Loading(message="Waiting", animation="|/-\\", delay=0.2, end_message="Finished!")
+Loading(message="Waiting", animation="⠋⠙⠸⠴⠦⠇", delay=0.2, end_message="Finished!")
 ```
 
 ## 🎨 Color Options

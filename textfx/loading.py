@@ -4,7 +4,7 @@ import threading
 from time import sleep
 
 class Loading():
-    def __init__(self, message="Loading ", animation="|/-\\", end_message="Done!", delay=0.1):
+    def __init__(self, message="Loading ", animation="⠋⠙⠸⠴⠦⠇", end_message="Done!", delay=0.1):
         self.message = message
         self.animation = animation
         self.end_message = end_message
