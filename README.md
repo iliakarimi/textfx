@@ -87,10 +87,12 @@ unwavetext("Steadying Waves", color="red", delay=0.1)
 
 ### Loading
 
-```python
-from textfx import Loading
+#### Spinner Loading:
 
-with Loading("Processing..."):
+```python
+from textfx import SpinnerLoading
+
+with SpinnerLoading("Processing..."):
     # do something
     time.sleep(5)
 ```
@@ -98,13 +100,13 @@ with Loading("Processing..."):
 You can customize the spinner animation:
 
 ```python
-Loading(animation=".oO@* ")
+SpinnerLoading(animation=".oO@* ")
 ```
 
 Or change the text and delay:
 
 ```python
-Loading(message="Waiting", animation="⠋⠙⠸⠴⠦⠇", delay=0.2, end_message="Finished!")
+SpinnerLoading(message="Waiting", animation="⠋⠙⠸⠴⠦⠇", delay=0.2, end_message="Finished!")
 ```
 
 ## 🎨 Color Options
