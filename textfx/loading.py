@@ -3,7 +3,7 @@ import itertools
 import threading
 from time import sleep
 
-class Loading():
+class SpinnerLoading():
     def __init__(self, message="Loading ", animation="⠋⠙⠸⠴⠦⠇", end_message="Done!", delay=0.1):
         self.message = message
         self.animation = animation

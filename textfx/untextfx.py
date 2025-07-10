@@ -11,7 +11,6 @@ def untypeeffect(text, color=None, delay=0.1):
     It simulates the process of manual text deletion, making it useful for interactive
     terminal applications, chatbots, or animations.
     """
-
     print(colored(text , color), end='', flush=True)
     sleep(1)
     for _ in text:
@@ -26,7 +25,6 @@ def unscrameffect(text, color=None, delay=0.1):
     This effect creates a glitch-like transition where letters are replaced with
     random symbols before vanishing completely.
     """
-
     scrambled = list(text)
     for i in range(len(text) + 1):
         if i < len(text): 
@@ -43,7 +41,6 @@ def unwavetext(text, color=None, delay=0.1):
     
     This effect gives the illusion of motion calming down over time.
     """
-
     for i in range(len(text), -1, -1):
         wave = ''.join([char.upper() if idx == i else char.lower() for idx, char in enumerate(text)])
         print("\r" + colored(wave, color), end='', flush=True)
