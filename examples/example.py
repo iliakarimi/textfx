@@ -1,4 +1,4 @@
-from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext, Loading
+from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext, SpinnerLoading
 from time import sleep
 import time
 
@@ -31,5 +31,5 @@ if __name__ == "__main__":
     run_examples()
 
 
-with Loading("در حال پردازش... "):
+with SpinnerLoading("Loading", "⠋⠙⠸⠴⠦⠇", "Done!", 0.1):
     sleep(3)
