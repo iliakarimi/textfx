@@ -1,33 +1,29 @@
-# Textfx
+# Textfx v2.2
 
 [![PyPI Downloads](https://static.pepy.tech/badge/textfx)](https://pepy.tech/project/textfx)
-![Python](https://img.shields.io/badge/python-3.9-blue)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 [![License](https://img.shields.io/github/license/iliakarimi/textfx)](https://github.com/iliakarimi/textfx/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/iliakarimi/textfx)](https://github.com/iliakarimi/textfx)
 
-Textfx is a Python library for creating dynamic and visually engaging text effects.
-It offers multiple functions to display text with unique animations and styles — perfect for enhancing console-based projects.
+Textfx is a lightweight Python library for creating dynamic, visually engaging console text effects.
 
-## Features
+## 🚀 What’s New in v2.2
 
-* **Typing Effect**: Simulates the effect of typing text character by character.
-* **Scramble Effect**: Displays random characters that gradually transform into the actual text.
-* **Wave Text**: Makes the text move in a wave-like pattern.
-* **Untyping Effect**: Gradually erases text character by character.
-* **Unscramble Effect**: The text gradually scrambles into random characters until it disappears.
-* **Unwave Text**: The text starts in a wave-like pattern and gradually stabilizes.
-* **Loading**: Display a loading animation using a customizable animation. **New!**
-* ✅ **Color Support**: All effects now support colored text using `termcolor`.
+* **Loading Animations**: Added three new context‑managed loader classes:
 
-## Installation
+  1. `SpinnerLoading` (classic spinning cursor)
+  2. `ProgressBarLoading` (animated bar moving back and forth)
+  3. `GlitchLoading` (random-character glitch effect)
+* **API Consistency**: All loaders share the same initialization parameters and `with`-syntax.
+* **Examples Moved**: Detailed usage examples are now located in `docs/examples.md` for a cleaner README.
 
-You can install it with:
+## 📦 Installation
 
 ```bash
 pip install textfx
 ```
 
-Or clone this repository and use the `textfx.py` file directly in your project:
+Or clone & install dependencies:
 
 ```bash
 git clone https://github.com/iliakarimi/textfx.git
@@ -35,121 +31,106 @@ cd textfx
 pip install -r requirements.txt
 ```
 
-Then, import the required functions in your Python script:
+## 🎨 Features
+
+1. **Typing Effect** (`typeeffect`)
+2. **Scramble Effect** (`scrameffect`)
+3. **Wave Text** (`wavetext`)
+4. **Untyping Effect** (`untypeeffect`)
+5. **Unscramble Effect** (`unscrameffect`)
+6. **Unwave Text** (`unwavetext`)
+7. **Loading Animations** (more new loading in v2.2)
+8. ✅ **Color Support** via `termcolor`
+
+## 🚀 Usage
+
+Import the desired effects and loaders:
 
 ```python
-from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext, Loading
+from textfx import (
+    typeeffect, scrameffect, wavetext,
+    untypeeffect, unscrameffect, unwavetext,
+    SpinnerLoading, ProgressBarLoading, GlitchLoading
+)
 ```
 
-## Usage
+For detailed examples, see [`docs/examples.md`](docs/examples.md).
 
-### Typing Effect
+### Loading Animations
+
+All loader classes share these parameters:
+
+* `message` (str): Prefix text displayed before the animation.
+* `end_message` (str): Text displayed after the loader stops.
+* `delay` (float): Seconds between animation frames.
+
+#### 1. SpinnerLoading
+
+Classic spinner cursor:
 
 ```python
-from textfx import typeeffect
-typeeffect("Hello, world!", color="cyan", delay=0.1)
+with SpinnerLoading(
+    message="Processing...",
+    animation="⠋⠙⠸⠴⠦⠇",
+    delay=0.1
+):
+    do_work()
 ```
 
-### Scramble Effect
+#### 2. ProgressBarLoading
+
+Animated bar moving back and forth:
 
 ```python
-from textfx import scrameffect
-scrameffect("Scrambled Text", color="green", delay=0.1)
+with ProgressBarLoading(
+    barline='-', animation='█', length=30,
+    message="Loading", end_message="Complete!", delay=0.05
+):
+    do_work()
 ```
 
-### Wave Text
+#### 3. GlitchLoading
+
+Random-character glitch effect:
 
 ```python
-from textfx import wavetext
-wavetext("Wave Text", color="yellow", delay=0.1)
-```
-
-### Untyping Effect
-
-```python
-from textfx import untypeeffect
-untypeeffect("Erasing Text", color="gray", delay=0.1)
-```
-
-### Unscramble Effect
-
-```python
-from textfx import unscrameffect
-unscrameffect("Glitching Away", color="blue", delay=0.1)
-```
-
-### Unwave Text
-
-```python
-from textfx import unwavetext
-unwavetext("Steadying Waves", color="red", delay=0.1)
-```
-
-### Loading
-
-#### Spinner Loading:
-
-```python
-from textfx import SpinnerLoading
-
-with SpinnerLoading("Processing..."):
-    # do something
-    time.sleep(5)
-```
-
-You can customize the spinner animation:
-
-```python
-SpinnerLoading(animation=".oO@* ")
-```
-
-Or change the text and delay:
-
-```python
-SpinnerLoading(message="Waiting", animation="⠋⠙⠸⠴⠦⠇", delay=0.2, end_message="Finished!")
+with GlitchLoading(
+    text="Decrypting...",
+    end_message="Access Granted!",
+    delay=0.1
+):
+    do_work()
 ```
 
 ## 🎨 Color Options
 
-All effects support **colored text** using the `color` parameter.
-
-You can choose from the following colors:
+All effects support an optional `color` parameter (via `termcolor`):
 
 ```
 grey, red, green, yellow, blue, magenta, cyan, white
 ```
 
-Example:
+> *Ensure your terminal supports ANSI colors for `termcolor` outputs.*
 
-```python
-typeeffect("This is red text!", color="red", delay=0.1)
-```
+## 📋 Dependencies
 
-> 💡 *Color support may depend on your terminal. Most modern terminals support `termcolor` outputs.*
-
-For more details, see [termcolor documentation](https://pypi.org/project/termcolor/).
-
-## Dependencies
-
-* Python **3.9** or above
+* Python **3.9+**
 * [`termcolor`](https://pypi.org/project/termcolor/)
 
-You can install the required dependencies using:
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## Contributing
+## 🏗️ Contributing
 
-Feel free to fork this repository and submit pull requests.
-Suggestions for new effects and improvements are always welcome!
+Pull requests are welcome! For more examples and details, refer to `docs/examples.md`.
 
-## License
+## 📄 License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+MIT License — see [LICENSE](LICENSE).
 
 ---
 
-🎉 **Enjoy using Textfx!**
-
+Enjoy Textfx v2.2! 🎉
