@@ -2,7 +2,7 @@ import sys
 import itertools
 import threading
 from time import sleep
-from random import random
+import random
 
 
 class SpinnerLoading():
@@ -143,7 +143,7 @@ class GlitchLoading():
     def _animate(self):
         while not self._done:
             glitched = ''.join(
-                char if random() > 0.2 else random.choice(self.charset)
+                char if random.random() > 0.2 else random.choice(self.charset)
                 for char in self.text
             )
             sys.stdout.write(f"\r{glitched}")
