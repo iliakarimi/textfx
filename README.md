@@ -1,21 +1,11 @@
-# Textfx v2.2
+# Textfx v2.2.1
 
 [![PyPI Downloads](https://static.pepy.tech/badge/textfx)](https://pepy.tech/project/textfx)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 [![License](https://img.shields.io/github/license/iliakarimi/textfx)](https://github.com/iliakarimi/textfx/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/iliakarimi/textfx)](https://github.com/iliakarimi/textfx)
 
-Textfx is a lightweight Python library for creating dynamic, visually engaging console text effects.
-
-## 🚀 What’s New in v2.2
-
-* **Loading Animations**: Added three new context‑managed loader classes:
-
-  1. `SpinnerLoading` (classic spinning cursor)
-  2. `ProgressBarLoading` (animated bar moving back and forth)
-  3. `GlitchLoading` (random-character glitch effect)
-* **API Consistency**: All loaders share the same initialization parameters and `with`-syntax.
-* **Examples Moved**: Detailed usage examples are now located in `docs/examples.md` for a cleaner README.
+Textfx is a lightweight Python library for creating dynamic, visually engaging console text effects and Loading Animation.
 
 ## 📦 Installation
 
@@ -133,4 +123,4 @@ MIT License — see [LICENSE](LICENSE).
 
 ---
 
-Enjoy Textfx v2.2! 🎉
+Enjoy Textfx!

@@ -1,4 +1,4 @@
-# Textfx v2.2 Examples
+# Textfx v2.2.1 Examples
 
 This file contains detailed usage examples for all available Textfx effects and loader classes.
 
@@ -15,7 +15,7 @@ typeeffect("Hello, world!", delay=0.1)
 # With color
 typeeffect("Colored typing...", color="cyan", delay=0.05)
 ```
-
+![Alt text](assets/typee.gif)
 ---
 
 ## 2. Scramble Effect (`scrameffect`)
@@ -29,7 +29,7 @@ scrameffect("Scrambled Text", delay=0.1)
 # With color and faster speed
 scrameffect("Fast & Green", color="green", delay=0.03)
 ```
-
+![Alt text](assets/Scrame.gif)
 ---
 
 ## 3. Wave Text (`wavetext`)
@@ -43,7 +43,7 @@ wavetext("Wave Text Demo", delay=0.1)
 # Colored wave
 wavetext("Rainbow Waves", color="magenta", delay=0.08)
 ```
-
+![Alt text](assets/wave.gif)
 ---
 
 ## 4. Untyping Effect (`untypeeffect`)
@@ -124,7 +124,7 @@ with GlitchLoading(
 ):
     time.sleep(5)
 ```
-
+![Alt text](assets/glitch.gif)
 ---
 
 ## 8. Color Examples
@@ -138,4 +138,4 @@ scrameffect("Yellow scramble", color="yellow", delay=0.1)
 
 ---
 
-Enjoy experimenting with Textfx v2.2! 🎉
+Enjoy experimenting with Textfx! 🎉
