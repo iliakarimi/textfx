@@ -1,8 +1,10 @@
 import sys
+import random
 import itertools
 import threading
 from time import sleep
-import random
+
+
 
 
 class SpinnerLoading():

@@ -1,7 +1,8 @@
-import random
 import string
+import random
 from time import sleep
 from termcolor import colored
+
 
 
 def typeeffect(text, color=None, delay=0.1):
