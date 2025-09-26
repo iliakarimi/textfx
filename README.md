@@ -1,4 +1,4 @@
-# Textfx v2.2.1
+# Textfx
 
 [![PyPI Downloads](https://static.pepy.tech/badge/textfx)](https://pepy.tech/project/textfx)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
