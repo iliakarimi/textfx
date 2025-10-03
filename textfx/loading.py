@@ -22,13 +22,11 @@ class SpinnerLoading():
     Parameters:
     - message (str): Message to display at the beginning of the loading (before the spinner)
     - animation (str): String of characters to create the spinning effect (displayed in a loop)
-    - end_message (str): Final message after the loading is complete
     - delay (float): Delay time between displaying each frame of the animation
     """    
-    def __init__(self, message="Loading ", animation="⠋⠙⠸⠴⠦⠇", end_message="Done!", delay=0.1):
+    def __init__(self, message="Loading ", animation="⠋⠙⠸⠴⠦⠇", delay=0.1):
         self.message = message
         self.animation = animation
-        self.end_message = end_message
         self.delay = delay
         self._done = False
         self._thread = None
@@ -40,7 +38,7 @@ class SpinnerLoading():
             sys.stdout.write(f"\r{self.message}{frame}")
             sys.stdout.flush()
             sleep(self.delay)
-        sys.stdout.write(f"\r{self.end_message}\n")
+
 
     def __enter__(self):
         self._done = False
@@ -72,15 +70,13 @@ class ProgressBarLoading():
     - animation (str): animated symbol (default: '#')
     - length (int): bar length (number of characters)
     - message (str): message when loading starts
-    - end_message (str): message when loading ends
     - delay (float): Delay time between animation frames (seconds)
     """
-    def __init__(self, barline='-', animation='#', length=20, message="Loading", end_message="Done!", delay=0.1):
+    def __init__(self, barline='-', animation='#', length=20, message="Loading", delay=0.1):
         self.length = length
         self.message = message
         self.animation = animation
         self.barline = barline
-        self.end_message = end_message
         self.delay = delay
         self._done = False
         self._thread = None
@@ -100,7 +96,7 @@ class ProgressBarLoading():
             elif self._pos == 0:
                 self._dir = 1
             self._pos += self._dir
-        sys.stdout.write(f"\r{self.end_message}{' ' * (self.length + 20)}\n")
+
 
     def __enter__(self):
         self._done = False
@@ -130,13 +126,11 @@ class GlitchLoading():
 
     Parameters:
     - text (str): The text to which the glitch effect will be applied
-    - end_message (str): The message to display after the loading is complete
     - delay (float): The delay between frames (lower value = faster effect)
     - charset (str): The characters used for the glitch effect
     """
-    def __init__(self, text="Loading...", end_message="Done!", delay=0.1, charset="#$%&*@!?"):
+    def __init__(self, text="Loading...", delay=0.1, charset="#$%&*@!?"):
         self.text = text
-        self.end_message = end_message
         self.delay = delay
         self.charset = charset
         self._done = False
@@ -151,7 +145,7 @@ class GlitchLoading():
             sys.stdout.write(f"\r{glitched}")
             sys.stdout.flush()
             sleep(self.delay)
-        sys.stdout.write(f"\r{self.end_message}{' ' * len(self.text)}\n")
+
 
     def __enter__(self):
         self._done = False
