@@ -74,7 +74,7 @@ Animated bar moving back and forth:
 ```python
 with ProgressBarLoading(
     barline='-', animation='█', length=30,
-    message="Loading", end_message="Complete!", delay=0.05
+    message="Loading", delay=0.05
 ):
     do_work()
 ```
@@ -86,7 +86,6 @@ Random-character glitch effect:
 ```python
 with GlitchLoading(
     text="Decrypting...",
-    end_message="Access Granted!",
     delay=0.1
 ):
     do_work()
