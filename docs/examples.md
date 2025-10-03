@@ -92,8 +92,7 @@ from textfx import SpinnerLoading
 with SpinnerLoading(
     message="Processing...",
     animation="⠋⠙⠸⠴⠦⠇",
-    delay=0.1,
-    end_message="Done!"
+    delay=0.1
 ):
     time.sleep(3)
 ```
@@ -106,7 +105,7 @@ from textfx import ProgressBarLoading
 
 with ProgressBarLoading(
     barline="-", animation="█", length=30,
-    message="Loading", end_message="Complete!", delay=0.05
+    message="Loading", delay=0.05
 ):
     time.sleep(4)
 ```
@@ -119,7 +118,6 @@ from textfx import GlitchLoading
 
 with GlitchLoading(
     text="Decrypting...",
-    end_message="Access Granted!",
     delay=0.1
 ):
     time.sleep(5)
@@ -138,4 +136,4 @@ scrameffect("Yellow scramble", color="yellow", delay=0.1)
 
 ---
 
-Enjoy experimenting with Textfx! 🎉
+Enjoy experimenting with Textfx!
