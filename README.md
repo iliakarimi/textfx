@@ -30,7 +30,7 @@ pip install -r requirements.txt
 5. **Unscramble Effect** (`unscrameffect`)
 6. **Unwave Text** (`unwavetext`)
 7. **Loading Animations** (more new loading in v2.2)
-8. ✅ **Color Support** via `termcolor`
+8. **Color Support** via `termcolor`
 
 ## 🚀 Usage
 
