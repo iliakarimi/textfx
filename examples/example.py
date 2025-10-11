@@ -2,6 +2,8 @@ from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffec
 from time import sleep
 import time
 
+
+
 def run_examples():
     print("Typing Effect:")
     typeeffect("Hello, world!", color="cyan", delay=0.1)
