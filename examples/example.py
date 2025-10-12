@@ -4,7 +4,6 @@ import time
 
 
 
-
 def run_examples():
     print("Typing Effect:")
     typeeffect("Hello, world!", color="cyan", delay=0.1)
