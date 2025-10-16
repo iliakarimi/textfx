@@ -122,4 +122,4 @@ MIT License — see [LICENSE](LICENSE).
 
 ---
 
-Enjoy Textfx!
+Enjoy using Textfx!
