@@ -7,7 +7,6 @@ from termcolor import colored
 
 
 
-
 def typeeffect(text, color=None, delay=0.1):
     """""
     This type of effect prints text character by character with a specific delay.
