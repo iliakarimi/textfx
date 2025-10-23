@@ -1,7 +1,7 @@
 # Textfx
 
 [![PyPI Downloads](https://static.pepy.tech/personalized-badge/textfx?period=monthly&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=GREEN&left_text=Monthly+downloads)](https://pepy.tech/projects/textfx)
-[![PyPI Downloads](https://static.pepy.tech/badge/textfx)](https://pepy.tech/project/textfx)
+[![PyPI Downloads](https://static.pepy.tech/personalized-badge/textfx?period=total&units=INTERNATIONAL_SYSTEM&left_color=BLACK&right_color=BLUE&left_text=Total+downloads)](https://pepy.tech/projects/textfx)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue)
 [![License](https://img.shields.io/github/license/iliakarimi/textfx)](https://github.com/iliakarimi/textfx/blob/main/LICENSE)
 [![Repo Size](https://img.shields.io/github/repo-size/iliakarimi/textfx)](https://github.com/iliakarimi/textfx)
