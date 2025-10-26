@@ -3,7 +3,7 @@ import random
 import itertools
 import threading
 from time import sleep
-
+from termcolor import colored
 
 
 
@@ -25,9 +25,11 @@ class SpinnerLoading():
     - animation (str): String of characters to create the spinning effect (displayed in a loop)
     - delay (float): Delay time between displaying each frame of the animation
     """    
-    def __init__(self, message="Loading ", animation="⠋⠙⠸⠴⠦⠇", delay=0.1):
+    def __init__(self, message="Loading ", animation="⠋⠙⠸⠴⠦⠇", message_color=None, animation_color=None, delay=0.1):
         self.message = message
         self.animation = animation
+        self.message_color = message_color
+        self.animation_color = animation_color
         self.delay = delay
         self._done = False
         self._thread = None
@@ -36,7 +38,7 @@ class SpinnerLoading():
         for frame in itertools.cycle(self.animation):
             if self._done:
                 break
-            sys.stdout.write(f"\r{self.message}{frame}")
+            sys.stdout.write(f"\r{colored(self.message, self.message_color)}{colored(frame, self.animation_color)}")
             sys.stdout.flush()
             sleep(self.delay)
 
@@ -73,10 +75,13 @@ class ProgressBarLoading():
     - message (str): message when loading starts
     - delay (float): Delay time between animation frames (seconds)
     """
-    def __init__(self, barline='-', animation='#', length=20, message="Loading", delay=0.1):
+    def __init__(self, message="Loading", barline='-', animation='#', length=20, message_color=None, animation_color=None, barline_color=None, delay=0.1):
         self.length = length
         self.message = message
         self.animation = animation
+        self.message_color = message_color
+        self.animation_color = animation_color
+        self.barline_color = barline_color
         self.barline = barline
         self.delay = delay
         self._done = False
@@ -86,9 +91,9 @@ class ProgressBarLoading():
 
     def _animate(self):
         while not self._done:
-            bar = [self.barline] * self.length
-            bar[self._pos] = self.animation
-            sys.stdout.write(f"\r{self.message}: [{''.join(bar)}]")
+            bar = [colored(self.barline, self.barline_color)] * self.length
+            bar[self._pos] = colored(self.animation, self.animation_color)
+            sys.stdout.write(f"\r{colored(self.message, self.message_color)}: [{''.join(bar)}]")
             sys.stdout.flush()
             sleep(self.delay)
 
@@ -130,10 +135,11 @@ class GlitchLoading():
     - delay (float): The delay between frames (lower value = faster effect)
     - charset (str): The characters used for the glitch effect
     """
-    def __init__(self, text="Loading...", delay=0.1, charset="#$%&*@!?"):
-        self.text = text
+    def __init__(self, message="Loading...", delay=0.1, charset="#$%&*@!?", color=None):
+        self.message = message
         self.delay = delay
         self.charset = charset
+        self.color = color
         self._done = False
         self._thread = None
 
@@ -141,9 +147,9 @@ class GlitchLoading():
         while not self._done:
             glitched = ''.join(
                 char if random.random() > 0.2 else random.choice(self.charset)
-                for char in self.text
+                for char in self.message
             )
-            sys.stdout.write(f"\r{glitched}")
+            sys.stdout.write(f"\r{colored(glitched, self.color)}")
             sys.stdout.flush()
             sleep(self.delay)
 
