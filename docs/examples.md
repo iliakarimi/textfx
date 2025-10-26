@@ -127,13 +127,29 @@ with GlitchLoading(
 
 ## 8. Color Examples
 
+
 ```python
 from textfx import typeeffect, scrameffect
 
 typeeffect("This is red text!", color="red", delay=0.1)
 scrameffect("Yellow scramble", color="yellow", delay=0.1)
 ```
+---
 
+```python
+from textfx import SpinnerLoading, ProgressBarLoading, GlitchLoading
+from time import sleep
+
+with SpinnerLoading(message="Loading ", animation="⠋⠙⠸⠴⠦⠇", message_color="red", animation_color="blue", delay=0.1):
+    sleep(5)
+
+with ProgressBarLoading(message="Loading", barline='-', animation='#', length=20, message_color="yellow", animation_color=None, barline_color="green", delay=0.1):
+    sleep(4)
+
+with GlitchLoading(message="Loading...", delay=0.1, charset="#$%&*@!?", color="blue"):
+    sleep(3)
+
+```
 ---
 
 Enjoy experimenting with Textfx!
