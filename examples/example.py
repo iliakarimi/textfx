@@ -1,4 +1,4 @@
-from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext, SpinnerLoading
+from textfx import typeeffect, scrameffect, wavetext, untypeeffect, unscrameffect, unwavetext, SpinnerLoading, GlitchLoading, ProgressBarLoading
 from time import sleep
 import time
 
@@ -33,5 +33,11 @@ if __name__ == "__main__":
     run_examples()
 
 
-with SpinnerLoading("Loading", "⠋⠙⠸⠴⠦⠇", "Done!", 0.1):
+with SpinnerLoading(message="Loading ", animation="⠋⠙⠸⠴⠦⠇", message_color="red", animation_color="blue", delay=0.1):
+    sleep(5)
+
+with ProgressBarLoading(message="Loading", barline='-', animation='#', length=20, message_color="yellow", animation_color=None, barline_color="green", delay=0.1):
+    sleep(4)
+
+with GlitchLoading(message="Loading...", delay=0.1, charset="#$%&*@!?", color="blue"):
     sleep(3)
