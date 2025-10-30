@@ -24,13 +24,13 @@ pip install -r requirements.txt
 
 ## 🎨 Features
 
-1. **Typing Effect** (`typeeffect`)
-2. **Scramble Effect** (`scrameffect`)
-3. **Wave Text** (`wavetext`)
-4. **Untyping Effect** (`untypeeffect`)
-5. **Unscramble Effect** (`unscrameffect`)
-6. **Unwave Text** (`unwavetext`)
-7. **Loading Animations** (more new loading in v2.2)
+1. **Typing Effect**
+2. **Scramble Effect**
+3. **Wave Text**
+4. **Untyping Effect**
+5. **Unscramble Effect**
+6. **Unwave Text**
+7. **Loading Animations**
 8. **Color Support** via `termcolor`
 
 ## 🚀 Usage
@@ -45,7 +45,6 @@ from textfx import (
 )
 ```
 
-For detailed examples, see [`docs/examples.md`](docs/examples.md).
 
 ### Loading Animations
 
@@ -85,12 +84,12 @@ with ProgressBarLoading(
 Random-character glitch effect:
 
 ```python
-with GlitchLoading(
-    text="Decrypting...",
-    delay=0.1
-):
-    do_work()
+with ProgressBarLoading(message="Compiling Code", barline=".", animation="⚙", length=40, message_color="cyan", animation_color="yellow", barline_color="white", delay=0.07):
+    time.sleep(5)
 ```
+
+For detailed examples, see [`docs/examples.md`](docs/examples.md).
+
 
 ## 🎨 Color Options
 
