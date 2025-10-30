@@ -1,4 +1,4 @@
-# Textfx v2.5 Examples
+# Textfx Examples
 
 This file contains detailed usage examples for all available Textfx effects and loader classes.
 
