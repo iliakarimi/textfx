@@ -88,7 +88,7 @@ with ProgressBarLoading(message="Compiling Code", barline=".", animation="⚙", 
     time.sleep(5)
 ```
 
-For detailed examples, see [`docs/examples.md`](docs/examples.md).
+For detailed examples, see [`Documention`](docs/examples.md).
 
 
 ## 🎨 Color Options
