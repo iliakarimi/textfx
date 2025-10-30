@@ -1,4 +1,4 @@
-# Textfx v2.2.1 Examples
+# Textfx v2.5 Examples
 
 This file contains detailed usage examples for all available Textfx effects and loader classes.
 
@@ -136,6 +136,11 @@ scrameffect("Yellow scramble", color="yellow", delay=0.1)
 ```
 ---
 
+
+## 9. Loading Examples with Loading Animation
+
+
+
 ```python
 from textfx import SpinnerLoading, ProgressBarLoading, GlitchLoading
 from time import sleep
@@ -148,6 +153,10 @@ with ProgressBarLoading(message="Loading", barline='-', animation='#', length=20
 
 with GlitchLoading(message="Loading...", delay=0.1, charset="#$%&*@!?", color="blue"):
     sleep(3)
+
+with ProgressBarLoading(message="Compiling Code", barline=".", animation="⚙", length=40, message_color="cyan", animation_color="yellow", barline_color="white", delay=0.07):
+    time.sleep(5)
+
 
 ```
 ---
