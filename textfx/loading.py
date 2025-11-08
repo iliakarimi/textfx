@@ -9,6 +9,7 @@ from termcolor import colored
 
 
 
+
 class SpinnerLoading():
     """
     A simple and lightweight spinner loading class that uses text animations to display the waiting state.
