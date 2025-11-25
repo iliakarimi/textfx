@@ -7,7 +7,6 @@ from termcolor import colored
 
 
 
-
 def untypeeffect(text, color=None, delay=0.1):
     """
     This effect gradually erases text character by character with a specific delay.
