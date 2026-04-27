@@ -33,7 +33,7 @@ pip install -r requirements.txt
 7. **Loading Animations**
 8. **Color Support** via `termcolor`
 
-## 🚀 Usage
+## Usage
 
 Import the desired effects and loaders:
 
